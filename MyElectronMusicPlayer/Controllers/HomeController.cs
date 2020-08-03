@@ -2,6 +2,7 @@
 using ElectronNET.API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -11,7 +12,8 @@ namespace MyElectronMusicPlayer.Controllers
     {
         public async Task<IActionResult> Index()
         {
-            string musicPath = await Electron.App.GetPathAsync(PathName.music);
+            string musicPath = await Electron.App.GetPathAsync(PathName.Music);
+            //string musicPath = await Electron.App.GetPathAsync(Environment.GetFolderPath(Environment.SpecialFolder.MyMusic));
             string[] mp3Files = Directory.GetFiles(musicPath, "*.mp3", SearchOption.TopDirectoryOnly);
             string[] mp4Files = Directory.GetFiles(musicPath, "*.mp4", SearchOption.TopDirectoryOnly);
 

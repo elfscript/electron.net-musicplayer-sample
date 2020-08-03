@@ -7,11 +7,11 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ElectronNET.API" Version="5.30.1" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Update="electron.manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Electron.NET\ElectronNET.API\ElectronNET.API.csproj" />
   </ItemGroup>
 </Project>

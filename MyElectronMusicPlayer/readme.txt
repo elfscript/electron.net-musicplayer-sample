@@ -1,3 +1,19 @@
+//=== 2020.08.03
+$ electronize build /target linux
+PathName.music is ok
+
+but
+$ electronize buildstep1 /target win
+Controllers/HomeController.cs(14,73): 
+error CS0117: 'PathName' does not contain a definition for 'music'
+--> ElectronNET.API.Entities.PathName
+
+[Q] how to get system music folder in C#?
+-->
+ error CS1503: Argument 1: cannot convert from 
+'System.Environment.SpecialFolder' to 'ElectronNET.API.Entities.PathName'
+
+//===
 $ dotnet build
 $ dotnet run
 ...
